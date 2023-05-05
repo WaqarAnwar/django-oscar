@@ -1,6 +1,8 @@
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
+STATICFILES_STORAGE = "oscar.core.filestorage.NoSourceMapsStorage"
+
 OSCAR_SHOP_NAME = 'Oscar'
 OSCAR_SHOP_TAGLINE = ''
 OSCAR_HOMEPAGE = reverse_lazy('catalogue:index')

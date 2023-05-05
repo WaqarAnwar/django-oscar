@@ -426,6 +426,8 @@ SECURE_HSTS_SECONDS = env.int('SECURE_HSTS_SECONDS', default=0)
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 
+STATICFILES_STORAGE = "oscar.core.filestorage.NoSourceMapsStorage"
+
 # Try and import local settings which can be used to override any of the above.
 try:
     from settings_local import *
